@@ -1,0 +1,19 @@
+//Xpath ==> Relative vs Absolute path
+
+//Abosolute path (/): sirve para indicar paso por paso la ruta para llegar a un elemento.
+//Ej: html/head/body/div/input
+//La desventaja de este es que si nosotros agregamos otra ruta mas, debemos indicar que hay que pasar por otra ruta mas antes de llegar a es elemento
+
+//Relative path (//): en este caso, nos ubicacmos especificamente sobre una ruta para encontrar el elemento
+//Ej: //input
+
+//Css selector
+
+// input[type="text"]
+// input[id="name"]
+// input[class="form"]
+
+//Shortcuts
+// input.form (by class)
+// input#name (by id)
+
