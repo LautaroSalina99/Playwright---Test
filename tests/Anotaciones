@@ -17,3 +17,20 @@
 // input.form (by class)
 // input#name (by id)
 
+//getByPlaceHolder
+//Nos permite encontrar un elemento por la propiedad de placeholder
+<!-- Ej: <input type="email" placeholder="name@example.com" -->
+
+//getByAltText
+//Nos permite encontrar un elemento por la propiedad alt
+<!-- <input.alt='Playwright logo'></input.alt> -->
+
+//getByRole
+//Nos permite encontrar elementos basados en su nombre accesible
+<!-- <h3>Sing up</h3>
+<label>
+    <input type="checkbox" /> Subcribe
+</label>
+<br/>
+<button>Sumbit</button> -->
+

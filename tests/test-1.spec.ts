@@ -11,4 +11,15 @@ test('test', async ({ page }) => {
 });
 
 //usamos esta herramienta para grabar las acciones que hacemos dentro de una pagina y esta lo pasa a codigo segun lo que hagamos
-//no se debe abusar de la herramienta, porque se debe ser muy concreto con las acciones 
+//no se debe abusar de la herramienta, porque se debe ser muy concreto con las acciones
+
+//Usando getByRole 
+test('test locator', async ({ page }) => {
+
+  await page.goto('https://www.mercadolibre.com.ar/')
+  //await page.getByRole('link', {name: 'Mis compras'}).click()
+  await page.getByRole('link', {name: 'Ofertas', exact: true}).click() //en el caso de querer presionar un boton con varias opciones, hay que expecificar
+  
+  await page.pause()
+
+});
