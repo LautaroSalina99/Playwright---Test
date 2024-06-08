@@ -26,9 +26,9 @@ test('test en saucedemo', async ({ page }) => {
 
     await page.locator('a.shopping_cart_link').click() //lo que hagp es que despues de agregar al carrito, este vaya y haga click en el carrito
     
-    await page.pause()
+    //await page.pause()
 
-    expect (page.getByRole('button', {name: 'Checkout'})).toBeVisible()
+    expect (page.getByRole('button', {name: 'Checkout   '})).toBeVisible()
     
     const actualName = await page.locator('.inventory_item_name').innerText()
     const actualDescription = await page.locator('.inventory_item_desc').innerText()
@@ -38,4 +38,14 @@ test('test en saucedemo', async ({ page }) => {
     expect(actualDescription).toEqual(expectedDescription)
     expect(actualPrice).toEqual(expectedPrice)
 
+    await page.getByRole('button', {name: 'Checkout'}).click() //hago clich en el boton Checkout
+    await page.getByRole('textbox', {name: 'First name'}).fill('Lautaro') //completo la informacion del checkout con mi nombre
+    await page.getByRole('textbox', {name: 'Last name'}).fill('Salina') //completo la informacion del checkout con mi apellido
+    await page.getByRole('textbox', {name: 'Zip/Postal code'}).fill('3400')//completo la informacion del checkout con el codigo postal
+    await page.getByRole('button', {name: 'Continue'}).click() // hacemos que haga click en el boton de continue
+    await page.getByRole('button', {name: 'Finish'}).click() // hacemos que haga click en el boton de finish
+
+    await expect (page.getByRole('heading', {name: 'Thank you for your order!'})).toBeVisible()
+
+    await page.pause()
 });
