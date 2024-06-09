@@ -2,7 +2,7 @@ import {test, expect} from '@playwright/test'
 
 test('test en NutriTech', async ({ page }) => {
 
-    await page.goto ('https://integrador2024-3ro4toynutricion.onrender.com/')
+    await page.goto ('https://integrador2024-3ro4to-y-nutricion.vercel.app/')
 
     await page.getByRole('link', {name: 'MYADMIN'}).click()
     await page.getByRole('textbox', {name: 'example@Email.com'}).fill('stefanomerinoderui@gmail.com')
