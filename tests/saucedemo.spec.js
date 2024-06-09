@@ -1,7 +1,7 @@
 import {test, expect} from '@playwright/test'
 
-//Probando requerimientos en una pagina ewb
-test('test en saucedemo', async ({ page }) => {
+//Probando requerimientos en una pagina web
+test('purchase an item', async ({ page }) => {
 
     await page.goto('https://www.saucedemo.com/') //ingresamos a la pagina 
 
@@ -49,3 +49,17 @@ test('test en saucedemo', async ({ page }) => {
 
     await page.pause()
 });
+
+test('purchase an item 1', async ({ page }) => {
+
+    await page.goto('https://www.saucedemo.com/') //ingresamos a la pagina 
+    await page.getByRole('textbox', {name: 'Username'}).fill('standard_user')
+    await page.getByRole('textbox', {name: 'Password'}).fill('secret_sauce') 
+})
+
+test('purchase an item 2', async ({ page }) => {
+
+    await page.goto('https://www.saucedemo.com/') //ingresamos a la pagina 
+    await page.getByRole('textbox', {name: 'Username'}).fill('standard_user')
+    await page.getByRole('textbox', {name: 'Password'}).fill('secret_sauce') 
+})
