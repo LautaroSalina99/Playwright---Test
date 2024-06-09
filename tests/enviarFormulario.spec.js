@@ -8,6 +8,5 @@ test('test en NutriTech', async ({ page }) => {
     await page.getByRole('radio',{name: 'Masculino'}).click()
     await page.getByRole('combobox',{name: 'Seleccione su edad'}).click()
 
-
     await page.pause()
 })
